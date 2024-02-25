@@ -22,7 +22,7 @@ class Template {
             $html .= '<div class="col-md-6 mx-auto">';
             $html .= '<div class="card mb-3">';
             $html .= '<div class="card-body">';
-            $html .= '<h5 class="card-title">' . $voiture['Marque'] . ' ' . $voiture['Modele'] .' ' . $voiture['id'] . '</h5>';
+            $html .= '<h5 class="card-title">' . $voiture['Marque'] . ' ' . $voiture['Modele'] . '</h5>';
             $html .= '<p class="card-text">';
             $html .= 'Année: ' . $voiture['Annee'] . '<br>';
             $html .= 'Couleur: ' . $voiture['Couleur'] . '<br>';
@@ -59,7 +59,7 @@ class Template {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             require_once 'Reserver.php';
             $reservation = new Reserver();
-            $reservation->setReservation($_SESSION['idUser'], $_SESSION['idVoiture'], $_POST['date_reservation_debut'], $_POST['date_reservation_fin'] );
+            echo $reservation->setReservation($_SESSION['idUser'], $_SESSION['idVoiture'], $_POST['date_reservation_debut'], $_POST['date_reservation_fin'] );
         }
 
 

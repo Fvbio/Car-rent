@@ -1,25 +1,31 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.css">
+    </head>
+    <body>
 
-<header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 text-start">
-                <input type="submit" class="btn btn-sm form-control" name="deconnecter" value="DECONNECTER" />
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-start">
+                    <input type="submit" class="btn btn-sm form-control" name="deconnecter" value="DECONNECTER" />
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-</body>
-</html>
- 
+    </body>
+    </html>
+    
 
-<?php 
+    <?php 
 
+
+if(isset($_POST['deconnecter'])){
+    session_destroy(); 
+    header('Location: login.php');
+}
+    
