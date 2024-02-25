@@ -7,5 +7,5 @@ require_once '../class/Template.php';
 echo "<br><br>";
 
 $voiture = new Voiture();
-$voiture->getVoitureBdd('RAV4');
-// echo $_SESSION['idVoiture'];
+$voiture->getVoitureBdd($_SESSION['modeleChoisi']);
+echo $_SESSION['idVoiture'];
