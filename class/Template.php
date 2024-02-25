@@ -59,7 +59,7 @@ class Template {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             require_once 'Reserver.php';
             $reservation = new Reserver();
-            $reservation->setReservation($_SESSION['idUser'], $_SERVER["idVoiture"], $_POST['date_reservation_debut'], $_POST['date_reservation_fin'] );
+            $reservation->setReservation($_SESSION['idUser'], $_SESSION['idVoiture'], $_POST['date_reservation_debut'], $_POST['date_reservation_fin'] );
         }
 
 
