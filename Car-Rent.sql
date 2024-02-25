@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : dim. 25 fév. 2024 à 15:53
+-- Généré le : dim. 25 fév. 2024 à 17:05
 -- Version du serveur : 5.7.39
 -- Version de PHP : 8.2.0
 
@@ -51,9 +51,12 @@ CREATE TABLE `Reservations` (
 --
 
 INSERT INTO `Reservations` (`id`, `id_user`, `id_voiture`, `DateReservationDebut`, `DateReservationFin`) VALUES
-(1, 5, NULL, '2024-02-27', '2024-02-29'),
-(2, 5, NULL, '2024-02-25', '2024-02-26'),
-(3, 5, NULL, '2024-02-25', '2024-02-26');
+(11, 5, 1, '2024-02-25', '2024-02-26'),
+(12, 5, 1, '2024-02-28', '2024-02-29'),
+(13, 5, 1, '2024-04-17', '2024-05-09'),
+(14, 5, 1, '2024-12-01', '2025-01-03'),
+(17, 5, 4, '2024-02-25', '2024-02-28'),
+(19, 5, 3, '2024-03-24', '2024-02-25');
 
 -- --------------------------------------------------------
 
@@ -143,7 +146,7 @@ ALTER TABLE `Voitures`
 -- AUTO_INCREMENT pour la table `Reservations`
 --
 ALTER TABLE `Reservations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT pour la table `Users`

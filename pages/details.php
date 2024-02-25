@@ -1,4 +1,6 @@
 <?php 
+require_once 'signOut.php';
+
 
 
 require_once '../class/Voiture.php';

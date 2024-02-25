@@ -1,6 +1,6 @@
 <?php
 require_once "class/Connection.php";
-session_start();
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
