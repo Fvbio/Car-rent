@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : dim. 25 fév. 2024 à 15:06
+-- Généré le : dim. 25 fév. 2024 à 15:53
 -- Version du serveur : 5.7.39
 -- Version de PHP : 8.2.0
 
@@ -42,10 +42,18 @@ CREATE TABLE `Reservations` (
   `id` int(11) NOT NULL,
   `id_user` int(11) DEFAULT NULL,
   `id_voiture` int(11) DEFAULT NULL,
-  `DateReservation` date DEFAULT NULL,
-  `HeureDebut` time DEFAULT NULL,
-  `HeureFin` time DEFAULT NULL
+  `DateReservationDebut` date DEFAULT NULL,
+  `DateReservationFin` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `Reservations`
+--
+
+INSERT INTO `Reservations` (`id`, `id_user`, `id_voiture`, `DateReservationDebut`, `DateReservationFin`) VALUES
+(1, 5, NULL, '2024-02-27', '2024-02-29'),
+(2, 5, NULL, '2024-02-25', '2024-02-26'),
+(3, 5, NULL, '2024-02-25', '2024-02-26');
 
 -- --------------------------------------------------------
 
@@ -135,7 +143,7 @@ ALTER TABLE `Voitures`
 -- AUTO_INCREMENT pour la table `Reservations`
 --
 ALTER TABLE `Reservations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `Users`
